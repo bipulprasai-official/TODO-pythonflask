@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head%} 
+<title>TODO Python Flask</title>
+{% endblock%}
+
+{% block body%}
+<div>
+    <h1>EDIT Task Master</h1>
+    <form action="/update/{{task.id}}" method="POST">
+        <input type="text" name="content" id="content" value="{{task.content}}" />
+        <input type="submit" value="UPDATE TASK"/>
+    </form>
+</div>
+ {% endblock%}
